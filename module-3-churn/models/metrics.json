@@ -1,0 +1,79 @@
+{
+  "random_forest": {
+    "Accuracy": 0.7622427253371186,
+    "Precision": 0.5372848948374761,
+    "Recall": 0.7513368983957219,
+    "F1": 0.6265328874024526,
+    "ROC-AUC": 0.8383321708129892,
+    "train_time_sec": 0.6220645904541016
+  },
+  "xgboost": {
+    "Accuracy": 0.7693399574166075,
+    "Precision": 0.5513626834381551,
+    "Recall": 0.7032085561497327,
+    "F1": 0.618096357226792,
+    "ROC-AUC": 0.8292128445581131,
+    "train_time_sec": 0.7509489059448242
+  },
+  "lightgbm": {
+    "Accuracy": 0.7601135557132718,
+    "Precision": 0.5343511450381679,
+    "Recall": 0.7486631016042781,
+    "F1": 0.623608017817372,
+    "ROC-AUC": 0.8379046216642124,
+    "train_time_sec": 0.3426952362060547
+  },
+  "catboost": {
+    "Accuracy": 0.7558552164655784,
+    "Precision": 0.5278810408921933,
+    "Recall": 0.7593582887700535,
+    "F1": 0.6228070175438597,
+    "ROC-AUC": 0.8381125836368802,
+    "train_time_sec": 1.3181216716766357
+  },
+  "lightgbm_optuna": {
+    "Accuracy": 0.7459190915542938,
+    "Precision": 0.5136986301369864,
+    "Recall": 0.8021390374331551,
+    "F1": 0.6263048016701461,
+    "ROC-AUC": 0.8503745898886564
+  },
+  "best_model": "LightGBM (Optuna)",
+  "best_roc_auc": 0.8495093850875104,
+  "best_cv_roc_auc": 0.8495093850875104,
+  "baseline_cv_roc_auc": 0.839862515976445,
+  "best_test_roc_auc": 0.8503745898886564,
+  "n_trials": 30,
+  "best_params": {
+    "n_estimators": 350,
+    "num_leaves": 90,
+    "max_depth": 3,
+    "learning_rate": 0.022943298923083385,
+    "subsample": 0.6236369825139823,
+    "colsample_bytree": 0.5164731483152039,
+    "min_child_samples": 35,
+    "reg_alpha": 0.002886956542416407,
+    "reg_lambda": 7.328751913955659
+  },
+  "fixed_params": {
+    "subsample_freq": 1,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "bonus": {
+    "stacking": {
+      "Accuracy": 0.8069552874378992,
+      "Precision": 0.6526946107784432,
+      "Recall": 0.5828877005347594,
+      "F1": 0.615819209039548,
+      "ROC-AUC": 0.8486321010617686
+    },
+    "calibrated": {
+      "Accuracy": 0.8048261178140526,
+      "Precision": 0.6542056074766355,
+      "Recall": 0.5614973262032086,
+      "F1": 0.60431654676259,
+      "ROC-AUC": 0.8503758815779277
+    }
+  }
+}

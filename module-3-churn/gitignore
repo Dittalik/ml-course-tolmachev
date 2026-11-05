@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# CatBoost / логи обучения
+catboost_info/
+lightning_logs/
+
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ВАЖНО: *.pkl, *.json, *.csv и *.png НЕ игнорируем —
+# модели, метаданные, датасет и графики должны попасть в репозиторий (ветка main).

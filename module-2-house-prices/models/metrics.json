@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "dataset": "House Prices - Advanced Regression Techniques",
+    "target": "log1p(SalePrice)",
+    "trained_at": "2026-11-05 23:38",
+    "sklearn_version": "1.9.1",
+    "random_state": 42,
+    "n_features": 180,
+    "n_train": 1166,
+    "n_holdout": 292
+  },
+  "best_model": "ElasticNet",
+  "models": {
+    "linear_regression": {
+      "RMSE (log)": 0.12888149783355993,
+      "MAE (log)": 0.08842329520608086,
+      "R² (log)": 0.9014663150077383,
+      "R² train": 0.946098340555182,
+      "RMSE ($)": 21204.644664187446,
+      "MAE ($)": 14980.899540381111,
+      "R² ($)": 0.9185989955406287,
+      "Время, с": 0.09506139997392893,
+      "cv_rmse_log": 0.11796921893085774
+    },
+    "ridge": {
+      "RMSE (log)": 0.13077670276769757,
+      "MAE (log)": 0.08735224120744407,
+      "R² (log)": 0.8985471288091715,
+      "R² train": 0.937695833238065,
+      "RMSE ($)": 20854.06064403995,
+      "MAE ($)": 14895.67703432569,
+      "R² ($)": 0.9212684086076408,
+      "Время, с": 0.010218699928373098,
+      "params": {
+        "alpha": 300,
+        "copy_X": true,
+        "fit_intercept": true,
+        "max_iter": null,
+        "positive": false,
+        "random_state": 42,
+        "solver": "auto",
+        "tol": 0.0001
+      },
+      "cv_rmse_log": 0.11276280905014358
+    },
+    "lasso": {
+      "RMSE (log)": 0.12230564266584389,
+      "MAE (log)": 0.08149857190707976,
+      "R² (log)": 0.9112646710618486,
+      "R² train": 0.9364854216534727,
+      "RMSE ($)": 19475.802387286134,
+      "MAE ($)": 13826.901138988407,
+      "R² ($)": 0.9313313539903497,
+      "Время, с": 0.023854600032791495,
+      "params": {
+        "alpha": 0.003,
+        "copy_X": true,
+        "fit_intercept": true,
+        "max_iter": 20000,
+        "positive": false,
+        "precompute": false,
+        "random_state": 42,
+        "selection": "cyclic",
+        "tol": 0.0001,
+        "warm_start": false
+      },
+      "cv_rmse_log": 0.11120331232657825,
+      "n_features_selected": 88,
+      "n_features_dropped": 92
+    },
+    "elasticnet": {
+      "RMSE (log)": 0.12235335371089306,
+      "MAE (log)": 0.08150652807816457,
+      "R² (log)": 0.9111954268151907,
+      "R² train": 0.9367946133063609,
+      "RMSE ($)": 19475.014629520254,
+      "MAE ($)": 13824.335395854969,
+      "R² ($)": 0.9313369089003953,
+      "Время, с": 0.02061739983037114,
+      "params": {
+        "alpha": 0.003,
+        "copy_X": true,
+        "fit_intercept": true,
+        "l1_ratio": 0.95,
+        "max_iter": 20000,
+        "positive": false,
+        "precompute": false,
+        "random_state": 42,
+        "selection": "cyclic",
+        "tol": 0.0001,
+        "warm_start": false
+      },
+      "cv_rmse_log": 0.11116219117321621
+    }
+  },
+  "bonus": {
+    "gradient_boosting": {
+      "RMSE (log)": 0.12095363970720632,
+      "MAE (log)": 0.08261849942038944,
+      "R² (log)": 0.9132156412748845,
+      "R² train": 0.9796229501601527,
+      "RMSE ($)": 19182.945133796933,
+      "MAE ($)": 14085.686509044592,
+      "R² ($)": 0.9333809654008614,
+      "Время, с": 4.030648799845949
+    },
+    "stacking": {
+      "RMSE (log)": 0.12110380852178405,
+      "MAE (log)": 0.07951506741160255,
+      "R² (log)": 0.9130000149511047,
+      "R² train": 0.9569088773126289,
+      "RMSE ($)": 19147.35282950193,
+      "MAE ($)": 13524.817711347638,
+      "R² ($)": 0.9336279478350595,
+      "Время, с": 9.051296000136063
+    }
+  }
+}
