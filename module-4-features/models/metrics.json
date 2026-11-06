@@ -1,0 +1,101 @@
+{
+  "random_forest": {
+    "Accuracy": 0.8706407137064072,
+    "Precision": 0.5590994371482176,
+    "Recall": 0.7801047120418848,
+    "F1": 0.6513661202185792,
+    "ROC-AUC": 0.9236893408768879,
+    "train_time_sec": 0.7181634902954102
+  },
+  "xgboost": {
+    "Accuracy": 0.8828061638280617,
+    "Precision": 0.5995717344753747,
+    "Recall": 0.7329842931937173,
+    "F1": 0.6595995288574794,
+    "ROC-AUC": 0.9204535177015606,
+    "train_time_sec": 0.6460528373718262
+  },
+  "lightgbm": {
+    "Accuracy": 0.875506893755069,
+    "Precision": 0.5725338491295938,
+    "Recall": 0.774869109947644,
+    "F1": 0.6585094549499444,
+    "ROC-AUC": 0.9248487604385445,
+    "train_time_sec": 0.41863346099853516
+  },
+  "catboost": {
+    "Accuracy": 0.870235198702352,
+    "Precision": 0.5580524344569289,
+    "Recall": 0.7801047120418848,
+    "F1": 0.6506550218340611,
+    "ROC-AUC": 0.9284350473816965,
+    "train_time_sec": 1.4372055530548096
+  },
+  "lightgbm_optuna": {
+    "Accuracy": 0.8661800486618005,
+    "Precision": 0.5451388888888888,
+    "Recall": 0.8219895287958116,
+    "F1": 0.6555323590814196,
+    "ROC-AUC": 0.9315339510204902
+  },
+  "best_model": "LightGBM (Optuna)",
+  "best_roc_auc": 0.9350793714309132,
+  "best_cv_roc_auc": 0.9350793714309132,
+  "baseline_cv_roc_auc": 0.9299563399031479,
+  "best_test_roc_auc": 0.9315339510204902,
+  "n_trials": 30,
+  "best_params": {
+    "n_estimators": 300,
+    "num_leaves": 60,
+    "max_depth": 6,
+    "learning_rate": 0.017883956617506903,
+    "subsample": 0.8662828656193364,
+    "colsample_bytree": 0.5394376050105616,
+    "min_child_samples": 32,
+    "reg_alpha": 4.003570359480368,
+    "reg_lambda": 0.02296171417309883
+  },
+  "fixed_params": {
+    "subsample_freq": 1,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "new_features": [
+    "TotalPages",
+    "TotalDuration",
+    "AvgPageValue",
+    "BounceExitRatio",
+    "AvgTimePerPage",
+    "ProductShare",
+    "IsHighTraffic",
+    "IsNewVisitor",
+    "IsWeekend",
+    "MonthNum"
+  ],
+  "feature_engineering_effect": {
+    "base_features": 18,
+    "all_features": 25,
+    "cv_roc_auc_base": 0.9299883610733829,
+    "cv_roc_auc_all": 0.9299563399031479,
+    "test_roc_auc_base": 0.9269364693350484,
+    "test_roc_auc_all": 0.9248487604385445
+  },
+  "bonus": {
+    "target_encoding": {
+      "Accuracy": 0.8645579886455799,
+      "Precision": 0.541095890410959,
+      "Recall": 0.8272251308900523,
+      "F1": 0.6542443064182195,
+      "ROC-AUC": 0.9317110671182082
+    },
+    "calibrated": {
+      "Accuracy": 0.9014598540145985,
+      "Precision": 0.7324414715719063,
+      "Recall": 0.5732984293193717,
+      "F1": 0.6431718061674009,
+      "ROC-AUC": 0.9310528484288169
+    },
+    "brier_before": 0.09864004392098048,
+    "brier_after": 0.06994944536738872
+  }
+}
